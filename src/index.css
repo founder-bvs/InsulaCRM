@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+:root {
+  --vrtkl-navy: #01283c;
+  --vrtkl-navy-hover: #023854;
+  --vrtkl-gold: #ffb012;
+  --vrtkl-gold-hover: #e59e10;
+  --vrtkl-bg: #f4f6f8;
+  --vrtkl-card: #ffffff;
+  --vrtkl-border: #e2e8f0;
+  --vrtkl-text: #01283c;
+  --vrtkl-muted: #64748b;
+
+  /* Backward compatibility tokens mapped to VRTKL brand palette */
+  --color-parchment: #f4f6f8;
+  --color-soft-paper: #ffffff;
+  --color-warm-mist: #e2e8f0;
+  --color-ash: #64748b;
+  --color-ink: #01283c;
+  --color-teal: #01283c;
+  --color-teal-hover: #023854;
+  --color-teal-soft: #f0f5f8;
+}
+
+.dark {
+  --vrtkl-navy: #01283c;
+  --vrtkl-navy-hover: #023854;
+  --vrtkl-gold: #ffb012;
+  --vrtkl-gold-hover: #e59e10;
+  --vrtkl-bg: #06131c;
+  --vrtkl-card: #0c1e2b;
+  --vrtkl-border: #163042;
+  --vrtkl-text: #f8fafc;
+  --vrtkl-muted: #94a3b8;
+
+  /* Backward compatibility tokens mapped to VRTKL dark brand palette */
+  --color-parchment: #06131c;
+  --color-soft-paper: #0c1e2b;
+  --color-warm-mist: #163042;
+  --color-ash: #94a3b8;
+  --color-ink: #f8fafc;
+  --color-teal: #ffb012;
+  --color-teal-hover: #e59e10;
+  --color-teal-soft: #112838;
+}
+
+@layer base {
+  body {
+    background-color: var(--vrtkl-bg);
+    color: var(--vrtkl-text);
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Custom scrollbars without glowing artifacts */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(1, 40, 60, 0.2);
+  border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(255, 176, 18, 0.25);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(1, 40, 60, 0.4);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 176, 18, 0.45);
+}
